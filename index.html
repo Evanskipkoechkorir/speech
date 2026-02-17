@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speech</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        font-family:
+          "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        border-radius: 5px;
+      }
+      input {
+        background-color: rgb(216, 209, 209);
+        width: 70%;
+        height: 50px;
+        border: none;
+        outline: none;
+        font-size: 20px;
+        margin: auto;
+      }
+      button {
+        width: 50%;
+        margin-bottom: 70px;
+        cursor: pointer;
+        border: none;
+        font-size: 25px;
+        border-radius: 10px;
+        height: 40px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Write anything and press the speak button to hear it.</h1>
+    <input type="text" id="text" placeholder="Type Something..." />
+    <button
+      onclick="speechSynthesis.speak(new SpeechSynthesisUtterance(text.value))"
+    >
+      Speak
+    </button>
+  </body>
+</html>
